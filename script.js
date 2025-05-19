@@ -32,7 +32,6 @@ function main() {
  */
 function makeList(items) {
    let itemsArray = items;
-   itemsArray.join(",");
    console.log(toString.itemsArray);
    return itemsArray;
 }
