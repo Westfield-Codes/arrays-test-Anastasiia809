@@ -31,8 +31,8 @@ function main() {
  * @return: itemsArray
  */
 function makeList(items) {
-   let itemsArray = items;
-   console.log(toString.itemsArray);
+   let itemsArray = items.split(",");
+   console.log(itemsArray.toString());
    return itemsArray;
 }
 
@@ -49,13 +49,13 @@ function makeList(items) {
  * @param: shoppingList, prices
  * @return: pricesArray
  */
-function addPrices(shoppingList) {
-   let priceList = ["prices"];
-   priceList.join(",");
-   let pricesArray = [[]];
-   for (items=1;items<makeList; items++) {
+function addPrices(shoppingList,prices) {
+   let priceList = prices.split(",");
+   let pricesArray = [];
+   for (let item = 0; item <5;item++) {
       let itemPrice = [];
-      shoppingList.push(itemPrice);
+      itemPrice.push(shoppingList[item]);
+      itemPrice.push(priceList[item]);
       pricesArray.push(itemPrice);
    }
    console.log(pricesArray);
@@ -77,13 +77,13 @@ function addPrices(shoppingList) {
  */ 
 function calculateTotal(pricesArray) {
    let total = 0;
-   let message = " \nItems to buy: " ;
-   for (total = 1;total<=message; total++) {
-      message.join("$","price","\n");
-      parseFloat(pricesArray);
-      addPrices(total);
+   let message = " Items to buy: \n";
+   for (let item =0;item<5;item++) {
+      //new message line with the item name, $, the price and a line break.
+      message+=pricesArray[item][0]+"$"+pricesArray[item][1]+"\n";
+      total += parseFloat;
    }
-   total.toFixed(pricesArray);
-   alert("Total = "+total);
+   // total = total.toFixed(2);
+   alert("Total = " + total);
    return message;
 }
